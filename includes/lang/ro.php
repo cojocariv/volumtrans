@@ -116,7 +116,7 @@ return [
         'message' => 'Mesaj',
         'submit' => 'Trimite Solicitarea',
         'info_title' => 'Informații Contact',
-        'address' => 'București, România',
+        'address' => 'Iași, România',
         'hours' => 'Lun – Vin: 08:00 – 18:00 | Suport Urgență 24/7',
     ],
     'footer' => [
