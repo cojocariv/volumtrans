@@ -93,15 +93,15 @@
         ];
         ?>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 lg:h-24">
+            <div class="flex items-center justify-between h-20 lg:h-28">
                 <!-- Logo -->
-                <a href="#hero" class="flex items-center group" aria-label="<?= e(SITE_NAME) ?> — <?= e($t['nav']['home']) ?>">
+                <a href="#hero" class="site-logo-link group shrink-0" aria-label="<?= e(SITE_NAME) ?> — <?= e($t['nav']['home']) ?>">
                     <img
                         src="<?= e($assets['logo']) ?>"
                         alt="<?= e(SITE_NAME) ?>"
                         class="site-logo site-logo-header group-hover:opacity-90 transition-opacity duration-300"
-                        width="180"
-                        height="56"
+                        width="280"
+                        height="88"
                     >
                 </a>
 

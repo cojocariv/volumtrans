@@ -43,7 +43,11 @@
   }
 
   .site-logo-header {
-    @apply h-10 sm:h-12;
+    @apply h-14 sm:h-16 lg:h-[4.5rem] w-auto bg-white;
+  }
+
+  .site-logo-link {
+    @apply inline-flex items-center bg-white py-1 pr-2;
   }
 
   .site-logo-loader {
