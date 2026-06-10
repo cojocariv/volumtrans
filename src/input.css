@@ -57,7 +57,13 @@
   }
   .hero-title { @apply font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl text-primary leading-[1.08] tracking-tight; }
   .hero-text { @apply text-muted text-lg leading-relaxed max-w-lg; }
+  .hero-video {
+    @apply z-0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
   .hero-media-overlay {
+    @apply z-[1];
     background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(26,43,68,0.35) 100%);
   }
   .stat-minimal-value { @apply text-2xl lg:text-3xl font-semibold text-primary tabular-nums; }

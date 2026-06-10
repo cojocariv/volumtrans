@@ -214,7 +214,45 @@
   function initHeroVideo() {
     const video = document.querySelector('.hero-video');
     if (!video) return;
-    video.play().catch(() => {});
+
+    const fallbackSrc = video.dataset.fallback;
+    let playAttempts = 0;
+
+    const tryPlay = () => {
+      if (video.error) return;
+      playAttempts += 1;
+      const promise = video.play();
+      if (promise && typeof promise.catch === 'function') {
+        promise.catch(() => {
+          if (playAttempts < 4) {
+            setTimeout(tryPlay, 400 * playAttempts);
+          }
+        });
+      }
+    };
+
+    video.addEventListener('loadeddata', tryPlay, { once: true });
+    video.addEventListener('canplay', tryPlay, { once: true });
+
+    video.addEventListener('error', () => {
+      if (fallbackSrc && !video.dataset.fallbackUsed) {
+        video.dataset.fallbackUsed = '1';
+        video.src = fallbackSrc;
+        video.load();
+      }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && video.paused) tryPlay();
+    });
+
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.load();
+    }
+
+    window.addEventListener('load', tryPlay);
   }
 
   /* ── Video Hover Play ── */

@@ -26,10 +26,18 @@
         </div>
     </div>
 
-    <div class="hero-media flex-1 relative min-h-[45vh] lg:min-h-full order-1 lg:order-2 overflow-hidden" data-parallax="0.15">
-        <video class="hero-video absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="<?= e($assets['fleet_image']) ?>">
-            <source src="<?= e($assets['hero_video']) ?>" type="video/mp4">
-        </video>
+    <div class="hero-media flex-1 relative min-h-[45vh] lg:min-h-full order-1 lg:order-2 overflow-hidden">
+        <video
+            class="hero-video absolute inset-0 w-full h-full object-cover"
+            src="<?= e($assets['hero_video']) ?>"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="<?= e($assets['fleet_image']) ?>"
+            data-fallback="<?= e($assets['video_truck']) ?>"
+        ></video>
         <div class="hero-media-overlay absolute inset-0"></div>
         <div class="hero-media-caption reveal-up absolute bottom-8 left-8 right-8 lg:left-10 lg:right-10">
             <p class="text-white/90 text-sm font-medium"><?= e($t['eu']['badge']) ?></p>
