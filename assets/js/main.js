@@ -20,15 +20,23 @@
       setTimeout(() => loader.remove(), 500);
     };
 
-    // Nu aștepta videoul mare — afișează pagina când HTML/CSS sunt gata
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => setTimeout(hide, 400));
+      document.addEventListener('DOMContentLoaded', hide, { once: true });
     } else {
-      setTimeout(hide, 400);
+      hide();
     }
 
-    // Plafon de siguranță: max 2.5s indiferent de resurse
-    setTimeout(hide, 2500);
+    setTimeout(hide, 1200);
+  }
+
+  /* ── Lazy video source ── */
+  function loadVideoSource(video) {
+    if (!video || video.dataset.loaded === '1') return;
+    const src = video.dataset.src;
+    if (!src) return;
+    video.dataset.loaded = '1';
+    video.src = src;
+    video.load();
   }
 
   /* ── Header Scroll ── */
@@ -172,7 +180,20 @@
   function initHeroVideo() {
     const video = document.querySelector('.hero-video');
     if (!video) return;
-    video.play().catch(() => {});
+
+    const play = () => video.play().catch(() => {});
+
+    const start = () => {
+      loadVideoSource(video);
+      if (video.readyState >= 2) play();
+      else video.addEventListener('canplay', play, { once: true });
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(start, { timeout: 1500 });
+    } else {
+      setTimeout(start, 600);
+    }
   }
 
   /* ── Video Hover Play ── */
@@ -181,27 +202,30 @@
       const card = video.closest('.video-card');
       if (!card) return;
 
-      card.addEventListener('mouseenter', () => {
+      const playLoaded = () => {
+        loadVideoSource(video);
         video.play().catch(() => {});
-      });
+      };
+
+      card.addEventListener('mouseenter', playLoaded);
 
       card.addEventListener('mouseleave', () => {
         video.pause();
         video.currentTime = 0;
       });
 
-      // Autoplay on mobile when in view
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              loadVideoSource(video);
               video.play().catch(() => {});
             } else {
               video.pause();
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.35, rootMargin: '100px' }
       );
       observer.observe(video);
     });

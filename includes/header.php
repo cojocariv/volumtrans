@@ -31,6 +31,10 @@
     <meta name="twitter:description" content="<?= e($t['meta']['og_description']) ?>">
     <meta name="twitter:image" content="<?= e($assets['logo']) ?>">
 
+    <!-- CDN -->
+    <link rel="preconnect" href="https://cojocaristorage.blob.core.windows.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cojocaristorage.blob.core.windows.net">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +72,7 @@
 <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="<?= e($t['loader']) ?>">
     <div class="loader-inner">
         <div class="loader-logo">
-            <img src="<?= e($assets['logo']) ?>" alt="<?= e(SITE_NAME) ?>" class="site-logo site-logo-loader" width="220" height="80">
+            <img src="<?= e($assets['logo']) ?>" alt="<?= e(SITE_NAME) ?>" class="site-logo site-logo-loader" width="220" height="80" decoding="async" fetchpriority="low">
         </div>
         <div class="loader-bar"><div class="loader-bar-fill"></div></div>
         <p class="loader-text"><?= e($t['loader']) ?>...</p>
