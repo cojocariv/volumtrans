@@ -43,16 +43,16 @@
   }
 
   .site-logo-header {
-    @apply h-12 sm:h-14 rounded-mvp bg-cream-light px-3 py-1.5;
+    @apply h-10 sm:h-12;
   }
 
   .site-logo-loader {
-    @apply h-16 sm:h-20 rounded-mvp bg-cream-light px-4 py-2;
+    @apply h-14 sm:h-16;
     animation: logoFadeIn 0.8s ease-out;
   }
 
   .site-logo-footer {
-    @apply h-14 rounded-mvp bg-cream-light px-3 py-1.5;
+    @apply h-12;
   }
 
   .loader-bar {
@@ -68,23 +68,22 @@
     @apply text-white/50 text-xs tracking-brand uppercase;
   }
 
-  /* Header — MVP style */
+  /* Header — white */
   .site-header {
-    @apply bg-transparent border-b border-transparent;
+    @apply bg-white/95 backdrop-blur-md border-b border-cream-dark;
   }
 
   .site-header.scrolled {
-    @apply bg-primary-dark backdrop-blur-md border-white/5 shadow-none;
-    background-color: rgba(15, 26, 46, 0.97);
+    @apply bg-white shadow-sm border-cream-dark;
   }
 
   .nav-link {
-    @apply text-xs uppercase tracking-wide;
+    @apply text-xs uppercase tracking-wide text-primary/70 hover:text-primary transition-colors;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all duration-300;
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -92,11 +91,11 @@
   }
 
   .lang-btn {
-    @apply px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/60 hover:text-white transition-colors;
+    @apply px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary/50 hover:text-primary transition-colors;
   }
 
   .lang-btn-active {
-    @apply text-accent;
+    @apply text-primary;
   }
 
   /* Buttons — MVP corporate */

@@ -110,7 +110,7 @@
                     <ul class="flex items-center gap-6" role="list">
                         <?php foreach ($nav_items as $item): ?>
                         <li>
-                            <a href="<?= e($item['href']) ?>" class="nav-link text-sm font-medium text-white/90 hover:text-accent transition-colors duration-300 relative">
+                            <a href="<?= e($item['href']) ?>" class="nav-link text-sm font-medium relative">
                                 <?= e($item['label']) ?>
                             </a>
                         </li>
@@ -118,7 +118,7 @@
                     </ul>
 
                     <!-- Language Switcher -->
-                    <div class="flex items-center gap-2 border-l border-white/15 pl-6" role="group" aria-label="Language">
+                    <div class="flex items-center gap-2 border-l border-cream-dark pl-6" role="group" aria-label="Language">
                         <a href="<?= e(lang_url('ro')) ?>" class="lang-btn <?= $current_lang === 'ro' ? 'lang-btn-active' : '' ?>" lang="ro">RO</a>
                         <a href="<?= e(lang_url('en')) ?>" class="lang-btn <?= $current_lang === 'en' ? 'lang-btn-active' : '' ?>" lang="en">EN</a>
                     </div>
@@ -127,7 +127,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
                     <svg class="w-6 h-6 menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -140,11 +140,11 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu lg:hidden hidden" aria-hidden="true">
-            <div class="px-4 py-6 space-y-4 bg-primary-dark/98 backdrop-blur-xl border-t border-white/10">
+            <div class="px-4 py-6 space-y-4 bg-white border-t border-cream-dark shadow-lg">
                 <?php foreach ($nav_items as $item): ?>
-                <a href="<?= e($item['href']) ?>" class="mobile-nav-link block text-lg font-medium text-white py-2"><?= e($item['label']) ?></a>
+                <a href="<?= e($item['href']) ?>" class="mobile-nav-link block text-lg font-medium text-primary py-2 border-b border-cream-dark"><?= e($item['label']) ?></a>
                 <?php endforeach; ?>
-                <div class="flex items-center gap-2 pt-4 border-t border-white/10">
+                <div class="flex items-center gap-2 pt-4 border-t border-cream-dark">
                     <a href="<?= e(lang_url('ro')) ?>" class="lang-btn <?= $current_lang === 'ro' ? 'lang-btn-active' : '' ?>">RO</a>
                     <a href="<?= e(lang_url('en')) ?>" class="lang-btn <?= $current_lang === 'en' ? 'lang-btn-active' : '' ?>">EN</a>
                 </div>

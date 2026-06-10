@@ -26,7 +26,7 @@ if (!is_file($lang_file)) {
 $t = require $lang_file;
 
 $assets = [
-    'logo' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/logo.png',
+    'logo' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/Logo%20real.png',
     'hero_video' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/1-web.mp4',
     'about_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/portrait-middle-aged-bearded-trucker-standing-front-truck-trailer-against-grey-shiny-tarpaulin.jpg',
     'fleet_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/large-white-freight-truck-driving-winter-highway-through-snowy-countryside-transport-logistics.jpg',
