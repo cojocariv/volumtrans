@@ -36,7 +36,6 @@
             playsinline
             preload="auto"
             poster="<?= e($assets['fleet_image']) ?>"
-            data-fallback="<?= e($assets['video_truck']) ?>"
         ></video>
         <div class="hero-media-overlay absolute inset-0"></div>
         <div class="hero-media-caption reveal-up absolute bottom-8 left-8 right-8 lg:left-10 lg:right-10">
