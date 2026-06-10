@@ -9,7 +9,6 @@
             loop
             playsinline
             preload="none"
-            poster="<?= e($assets['fleet_image']) ?>"
         ></video>
         <div class="hero-overlay absolute inset-0"></div>
     </div>

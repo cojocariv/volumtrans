@@ -29,14 +29,14 @@ $assets = [
     'logo' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/logo.png',
     'hero_video' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/1-web.mp4',
     'about_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/portrait-middle-aged-bearded-trucker-standing-front-truck-trailer-against-grey-shiny-tarpaulin.jpg',
-    'fleet_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/truck-long-vehicle-ready-delivering-transport.jpg',
+    'fleet_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/large-white-freight-truck-driving-winter-highway-through-snowy-countryside-transport-logistics.jpg',
     'video_truck' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/0_Truck_Semi_trailer-web.mp4',
     'video_business' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/1164890_Man_Business_3840x2160-web.mp4',
     'gallery' => [
         'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/large-white-freight-truck-driving-winter-highway-through-snowy-countryside-transport-logistics.jpg',
         'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/truck-driver-inspecting-truck-long-vehicle-before-driving.jpg',
         'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/truck-forest-road-moving-lorry-freight-transport-scene.jpg',
-        'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/truck-long-vehicle-ready-delivering-transport.jpg',
+        'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/portrait-middle-aged-bearded-trucker-standing-front-truck-trailer-against-grey-shiny-tarpaulin.jpg',
     ],
 ];
 

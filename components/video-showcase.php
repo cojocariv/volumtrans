@@ -11,7 +11,7 @@
             <!-- Video Card 1 -->
             <article class="video-card reveal-left group">
                 <div class="video-card-inner relative overflow-hidden aspect-video">
-                    <video class="video-card-media w-full h-full object-cover" muted loop playsinline preload="none" data-video-hover data-src="<?= e($assets['video_truck']) ?>" poster="<?= e($assets['fleet_image']) ?>"></video>
+                    <video class="video-card-media w-full h-full object-cover" muted loop playsinline preload="none" data-video-hover data-src="<?= e($assets['video_truck']) ?>"></video>
                     <div class="video-card-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-8">
                         <div class="video-play-btn mb-4" aria-hidden="true">
                             <svg class="w-12 h-12 text-white/80 group-hover:text-accent group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
