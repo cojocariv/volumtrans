@@ -43,11 +43,11 @@
   }
 
   .site-logo-header {
-    @apply h-14 sm:h-16 lg:h-[4.5rem] w-auto bg-white;
+    @apply h-14 sm:h-16 lg:h-[4.5rem] w-auto;
   }
 
   .site-logo-link {
-    @apply inline-flex items-center bg-white py-1 pr-2;
+    @apply inline-flex items-center shrink-0;
   }
 
   .site-logo-loader {
@@ -72,13 +72,15 @@
     @apply text-white/50 text-xs tracking-brand uppercase;
   }
 
-  /* Header — white */
+  /* Header — solid white (#FFFFFF) to match logo PNG background */
   .site-header {
-    @apply bg-white/95 backdrop-blur-md border-b border-cream-dark;
+    @apply bg-white border-b border-cream-dark;
+    background-color: #ffffff;
   }
 
   .site-header.scrolled {
-    @apply bg-white shadow-sm border-cream-dark;
+    @apply shadow-sm border-cream-dark;
+    background-color: #ffffff;
   }
 
   .nav-link {
