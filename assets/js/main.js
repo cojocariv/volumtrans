@@ -12,16 +12,23 @@
     const loader = document.getElementById('page-loader');
     if (!loader) return;
 
+    let hidden = false;
     const hide = () => {
+      if (hidden) return;
+      hidden = true;
       loader.classList.add('loaded');
-      setTimeout(() => loader.remove(), 700);
+      setTimeout(() => loader.remove(), 500);
     };
 
-    if (document.readyState === 'complete') {
-      setTimeout(hide, 800);
+    // Nu aștepta videoul mare — afișează pagina când HTML/CSS sunt gata
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => setTimeout(hide, 400));
     } else {
-      window.addEventListener('load', () => setTimeout(hide, 800));
+      setTimeout(hide, 400);
     }
+
+    // Plafon de siguranță: max 2.5s indiferent de resurse
+    setTimeout(hide, 2500);
   }
 
   /* ── Header Scroll ── */
