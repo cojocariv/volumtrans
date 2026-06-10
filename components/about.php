@@ -15,7 +15,7 @@
                     >
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
                 </div>
-                <div class="about-badge absolute -bottom-6 -right-6 lg:right-8 p-6 reveal-up" style="transition-delay: 0.3s">
+                <div class="about-badge absolute -bottom-6 -right-6 lg:right-8 p-6 reveal-up z-10" style="transition-delay: 0.3s">
                     <div class="font-display font-bold text-4xl" data-counter="15" data-suffix="+">15+</div>
                     <div class="text-sm text-primary-dark/80 mt-1 uppercase text-xs tracking-wide"><?= e($t['about']['years']) ?></div>
                 </div>

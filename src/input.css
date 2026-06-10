@@ -131,7 +131,19 @@
     @apply text-primary/60 text-base lg:text-lg leading-relaxed;
   }
 
-  /* Hero — MVP dark overlay */
+  /* Hero */
+  .hero-section {
+    @apply min-h-screen min-h-[100svh];
+  }
+
+  .hero-video-wrap {
+    @apply absolute inset-0 w-full h-full overflow-hidden;
+  }
+
+  .hero-video {
+    @apply absolute inset-0 w-full h-full min-w-full min-h-full object-cover;
+  }
+
   .hero-overlay {
     background: linear-gradient(
       160deg,

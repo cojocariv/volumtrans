@@ -143,7 +143,7 @@
   function initParallax() {
     if (prefersReducedMotion) return;
 
-    const elements = document.querySelectorAll('[data-parallax]');
+    const elements = document.querySelectorAll('[data-parallax]:not(.hero-video-wrap)');
     if (!elements.length) return;
 
     const onScroll = () => {
@@ -158,6 +158,14 @@
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ── Hero Video Autoplay ── */
+  function initHeroVideo() {
+    const video = document.querySelector('.hero-video');
+    if (!video) return;
+    video.play().catch(() => {});
   }
 
   /* ── Video Hover Play ── */
@@ -369,6 +377,7 @@
     initReveal();
     initCounters();
     initParallax();
+    initHeroVideo();
     initVideoHover();
     initMap();
     initGallery();

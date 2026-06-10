@@ -1,7 +1,7 @@
 <?php /** @var array<string, mixed> $t */ /** @var array<string, mixed> $assets */ ?>
-<section id="hero" class="hero-section relative min-h-screen flex items-center overflow-hidden" aria-label="Hero">
-    <div class="hero-video-wrap absolute inset-0 z-0" data-parallax="0.3">
-        <video class="hero-video w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="<?= e($assets['fleet_image']) ?>">
+<section id="hero" class="hero-section relative min-h-screen flex items-center overflow-hidden bg-primary-dark" aria-label="Hero">
+    <div class="hero-video-wrap absolute inset-0 z-0">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="<?= e($assets['fleet_image']) ?>">
             <source src="<?= e($assets['hero_video']) ?>" type="video/mp4">
         </video>
         <div class="hero-overlay absolute inset-0"></div>
@@ -10,7 +10,7 @@
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div class="max-w-4xl">
             <div class="reveal-up hero-brand">
-                Volum Trans — trans-logistic
+                VOLUM TRANS LOGISTIC
             </div>
 
             <h1 class="reveal-up hero-headline mb-8" style="transition-delay: 0.1s">
