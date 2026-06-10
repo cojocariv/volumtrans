@@ -10,8 +10,8 @@ $service_icons = [
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>',
 ];
 ?>
-<section id="services" class="section-padding bg-cream" aria-labelledby="services-title">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="services" class="section-padding bg-surface-soft border-y border-line" aria-labelledby="services-title">
+    <div class="max-w-content mx-auto px-6 lg:px-10">
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 reveal-up">
             <div class="max-w-2xl">
                 <span class="section-label"><?= e($t['services']['label']) ?></span>
@@ -20,9 +20,9 @@ $service_icons = [
             <p class="section-subtitle max-w-md lg:text-right"><?= e($t['services']['subtitle']) ?></p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-cream-dark">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php foreach ($t['services']['items'] as $i => $service): ?>
-            <article class="service-card reveal-up group bg-cream-light" style="transition-delay: <?= e((string)($i * 0.08)) ?>s">
+            <article class="service-card reveal-up group" style="transition-delay: <?= e((string)($i * 0.08)) ?>s">
                 <div class="service-card-inner">
                     <span class="service-number" aria-hidden="true"><?= sprintf('%02d', $i + 1) ?></span>
                     <div class="service-icon-wrap">
@@ -30,13 +30,10 @@ $service_icons = [
                             <?= $service_icons[$i] ?? $service_icons[0] ?>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-lg text-primary mb-3 pr-12 group-hover:text-accent transition-colors">
-                        <?= e($service['title']) ?>
-                    </h3>
-                    <p class="text-primary/60 text-sm leading-relaxed mb-6 flex-grow"><?= e($service['desc']) ?></p>
-                    <a href="#contact" class="service-cta inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                        <?= e($t['services']['cta']) ?>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    <h3 class="font-semibold text-lg text-primary mb-3"><?= e($service['title']) ?></h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6 flex-grow"><?= e($service['desc']) ?></p>
+                    <a href="#contact" class="service-cta group-hover:gap-3 transition-all">
+                        <?= e($t['services']['cta']) ?> →
                     </a>
                 </div>
             </article>

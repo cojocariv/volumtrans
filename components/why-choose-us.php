@@ -10,25 +10,24 @@ $why_icons = [
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>',
 ];
 ?>
-<section id="why-us" class="section-padding why-section relative overflow-hidden" aria-labelledby="why-title">
-    <div class="why-bg-pattern absolute inset-0 opacity-5" aria-hidden="true"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-            <span class="section-label text-accent"><?= e($t['why']['label']) ?></span>
-            <h2 id="why-title" class="section-title text-white mt-4 mb-4"><?= e($t['why']['title']) ?></h2>
-            <p class="text-white/55 text-base lg:text-lg max-w-2xl mx-auto"><?= e($t['why']['subtitle']) ?></p>
+<section id="why-us" class="section-padding why-section" aria-labelledby="why-title">
+    <div class="max-w-content mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-blur">
+            <span class="section-label"><?= e($t['why']['label']) ?></span>
+            <h2 id="why-title" class="section-title mt-4 mb-4"><?= e($t['why']['title']) ?></h2>
+            <p class="section-subtitle mx-auto"><?= e($t['why']['subtitle']) ?></p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php foreach ($t['why']['items'] as $i => $item): ?>
             <article class="why-card reveal-up group" style="transition-delay: <?= e((string)($i * 0.08)) ?>s">
-                <div class="why-icon-wrap group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <div class="why-icon-wrap mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <?= $why_icons[$i] ?? $why_icons[0] ?>
                     </svg>
                 </div>
-                <h3 class="font-display font-bold text-lg text-white mb-3"><?= e($item['title']) ?></h3>
-                <p class="text-white/50 text-sm leading-relaxed"><?= e($item['desc']) ?></p>
+                <h3 class="font-semibold text-lg text-primary mb-3"><?= e($item['title']) ?></h3>
+                <p class="text-muted text-sm leading-relaxed"><?= e($item['desc']) ?></p>
             </article>
             <?php endforeach; ?>
         </div>

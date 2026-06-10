@@ -20,6 +20,7 @@ require_once __DIR__ . '/includes/header.php';
 
 $components = [
     'hero.php',
+    'eu-bar.php',
     'about.php',
     'services.php',
     'fleet.php',

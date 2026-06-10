@@ -17,7 +17,12 @@ return [
         'contact' => 'Contact',
         'quote' => 'Request a Quote',
     ],
+    'eu' => [
+        'trust' => 'Trusted across 27 European Union member states',
+        'badge' => 'European Logistics',
+    ],
     'hero' => [
+        'badge' => 'Freight transport · European Union',
         'headline' => 'Reliable Logistics Across Europe',
         'subheadline' => 'Professional freight transport and logistics solutions connecting businesses throughout the European Union.',
         'cta_quote' => 'Request a Quote',

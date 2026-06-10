@@ -70,11 +70,13 @@
 
   /* ── Reveal on Scroll ── */
   function initReveal() {
-    const elements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const selectors = '.reveal-up, .reveal-left, .reveal-right, .reveal-blur, .reveal-scale';
+    const elements = document.querySelectorAll(selectors);
     if (!elements.length) return;
 
     if (prefersReducedMotion) {
       elements.forEach((el) => el.classList.add('revealed'));
+      document.querySelectorAll('.stagger-children').forEach((el) => el.classList.add('revealed'));
       return;
     }
 
@@ -87,10 +89,57 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -50px 0px' }
     );
 
     elements.forEach((el) => observer.observe(el));
+  }
+
+  /* ── Stagger Children ── */
+  function initStagger() {
+    const containers = document.querySelectorAll('[data-stagger], .stagger-children');
+    if (!containers.length) return;
+
+    if (prefersReducedMotion) {
+      containers.forEach((c) => c.classList.add('revealed'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const container = entry.target;
+          const delay = parseFloat(container.dataset.stagger) || 0.08;
+          const children = container.children;
+
+          Array.from(children).forEach((child, i) => {
+            child.style.transitionDelay = `${i * delay}s`;
+          });
+
+          container.classList.add('revealed');
+          observer.unobserve(container);
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    containers.forEach((c) => observer.observe(c));
+  }
+
+  /* ── Hero entrance on load ── */
+  function initHeroEntrance() {
+    if (prefersReducedMotion) return;
+
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+
+    requestAnimationFrame(() => {
+      hero.querySelectorAll('.reveal-up, .reveal-blur').forEach((el, i) => {
+        setTimeout(() => el.classList.add('revealed'), 200 + i * 100);
+      });
+    });
   }
 
   /* ── Counter Animation ── */
@@ -375,6 +424,8 @@
     initHeader();
     initMobileMenu();
     initReveal();
+    initStagger();
+    initHeroEntrance();
     initCounters();
     initParallax();
     initHeroVideo();

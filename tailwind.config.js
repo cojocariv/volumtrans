@@ -12,35 +12,55 @@ module.exports = {
         primary: {
           DEFAULT: '#1A2B44',
           dark: '#0F1A2E',
-          light: '#243B5C',
+          light: '#334155',
         },
         accent: {
           DEFAULT: '#F59E0B',
-          dark: '#D97706',
           light: '#FBBF24',
         },
-        cream: {
-          DEFAULT: '#F8F6F2',
-          dark: '#EDE9E3',
-          light: '#FDFCFA',
+        eu: {
+          blue: '#003399',
+          gold: '#FFCC00',
         },
-        navy: {
-          DEFAULT: '#1A2B44',
-          900: '#0F1A2E',
-          800: '#152238',
+        surface: {
+          DEFAULT: '#FFFFFF',
+          soft: '#FAFBFC',
+          muted: '#F4F6F8',
         },
+        line: '#E8EDF2',
+        muted: '#64748B',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Manrope', 'system-ui', 'sans-serif'],
-        heading: ['Poppins', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
       },
-      borderRadius: {
-        mvp: '4px',
+      maxWidth: {
+        content: '1280px',
       },
-      letterSpacing: {
-        brand: '0.25em',
-        wide: '0.15em',
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+        'fade-up': 'fadeUp 0.8s ease-out forwards',
+        shimmer: 'shimmer 2.5s linear infinite',
+        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        pulseSoft: {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '1' },
+        },
       },
     },
   },

@@ -17,7 +17,12 @@ return [
         'contact' => 'Contact',
         'quote' => 'Solicită Ofertă',
     ],
+    'eu' => [
+        'trust' => 'De încredere în 27 de state membre ale Uniunii Europene',
+        'badge' => 'Logistică Europeană',
+    ],
     'hero' => [
+        'badge' => 'Transport marfă · Uniunea Europeană',
         'headline' => 'Logistică de Încredere în Europa',
         'subheadline' => 'Soluții profesionale de transport marfă și logistică care conectează afaceri din întreaga Uniune Europeană.',
         'cta_quote' => 'Solicită Ofertă',
