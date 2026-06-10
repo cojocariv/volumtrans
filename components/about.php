@@ -46,7 +46,9 @@
                         <div class="counter-value font-display font-bold text-3xl text-primary" data-counter="350" data-suffix="+">0</div>
                         <div class="counter-label text-xs uppercase tracking-wide text-primary/50 mt-1"><?= e($t['about']['clients']) ?></div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
