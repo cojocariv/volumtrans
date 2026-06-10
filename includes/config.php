@@ -27,7 +27,7 @@ $t = require $lang_file;
 
 $assets = [
     'logo' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/logo.png',
-    'hero_video' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/0_Road_Truck_3840x2160-web.mp4',
+    'hero_video' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/1-web.mp4',
     'about_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/portrait-middle-aged-bearded-trucker-standing-front-truck-trailer-against-grey-shiny-tarpaulin.jpg',
     'fleet_image' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/foto/truck-long-vehicle-ready-delivering-transport.jpg',
     'video_truck' => 'https://cojocaristorage.blob.core.windows.net/volumtrans/video/0_Truck_Semi_trailer-web.mp4',
