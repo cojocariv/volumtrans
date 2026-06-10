@@ -16,6 +16,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="<?= e(SITE_URL) ?>">
 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= e(SITE_URL) ?>">
